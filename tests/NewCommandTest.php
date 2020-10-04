@@ -26,7 +26,7 @@ class NewCommandTest extends TestCase
         $this->assertApplicationIsScaffolded($scaffoldDirectory, []);
     }
 
-    public function test_it_can_scaffold_a_new_laravel_app()
+    public function it_can_scaffold_a_new_laravel_app()
     {
         $scaffoldDirectoryName = 'tests-output'.DIRECTORY_SEPARATOR.'my-app';
         $scaffoldDirectory = $this->prepareScaffoldDirectory($scaffoldDirectoryName);
