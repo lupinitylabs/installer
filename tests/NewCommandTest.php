@@ -71,7 +71,7 @@ class NewCommandTest extends TestCase
 
         $statusCode = $tester->execute($parameters);
 
-        $this->assertSame(0, $statusCode);
+        $this->assertSame(0, $statusCode, 'Executing failed. Current directory: '.getcwd().', scaffold directory set: '.$scaffoldDirectory.', parameters: '.implode(', ', $parameters));
         $this->assertDirectoryExists($scaffoldDirectory.DIRECTORY_SEPARATOR.'vendor');
         $this->assertFileExists($scaffoldDirectory.DIRECTORY_SEPARATOR.'.env');
     }
